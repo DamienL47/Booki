@@ -51,8 +51,8 @@ header {
     width: 162px;
     height: 2px;
     display: block;
-    top: 0;
-    transform: translateX(-20%);
+    top: -15px;
+    transform: translateX(-10%);
 }
 
 /*  --------------------------------------- MAIN DESKTOP ---------------------------------- */
@@ -205,8 +205,6 @@ header {
     padding: 4px;
     background-color: #FFFFFF;
     border-radius: 20px;
-}
-.cardAccommodation:hover, .cardPopular:hover {
     box-shadow: #F2F2F2 1px 1px 10px;
 }
 .cardAccommodation {
@@ -465,61 +463,216 @@ header {
 /* -------------------------- VERSION MOBILE ----------------------------------- */
 @media screen and (max-width: 767px) {
 /* ---------------------------- HEADER DESKTOP ---------------------------------*/
-header {
-    margin: 0;
-}
-.logoHeader {
-    height: 19px;
-    margin: 20px auto 40px auto;
-}
-.containerHeader {
-   flex-direction: column;
-}
-nav {
-    width: 100%;
-    border: 2px solid orange;
-}
-.menu > li {
-    margin-left: -40px;
-}
-.menu {
-    justify-content: space-around;
-    align-items: center;
-}
-.menu > li > a:hover::before {
-    display: none;
-}
-.menu > li > a {
-    margin-right: 0;
-}
-.menu > li > a::after {
-    position: absolute;
-    content: "";
-    background-color: #D9D9D9;
-    width: 120%;
-    height: 2px;
-    right: 0;
-    bottom: -30px;
-    display: block;
-    transform: translateY(-30%);
-}
-.menu > li > a:hover::after {
-    width: 50%;
-    background-color: #0065FC;
-    left: 0;
-    transform: translateY(-30%);
-}
+    header {
+        margin: 0;
+    }
+    .logoHeader {
+        height: 19px;
+        margin: 20px auto 40px auto;
+    }
+    .containerHeader {
+    flex-direction: column;
+    }
+    nav {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #D9D9D9;
+    }
+    .menu > li {
+        margin-left: -40px;
+    }
+    .menu {
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menu > li > a:hover::before {
+        display: none;
+    }
+    .menu > li > a {
+        margin-right: 0;
+    }
+    .menu > li > a:hover::after {
+        position: absolute;
+        content: "";
+        background-color: #0065FC;
+        width: 50%;
+        height: 2px;
+        display: block;
+        top: 50px;
+        transform: translate(-50%, -50%);
+        margin-left: 40px;
+    }
 
 
 /* -------------------------- SECTION FILTER ----------------------------------- */
-
+    .functionSearch {
+        margin: 30px 50px;
+    }
+    .formSearch {
+        padding-top: 30px;
+        margin: auto;
+    }
+    .searchButton {
+        width: max-content;
+    }
+    .mask {
+        display: none;
+    }
+    .fa-magnifying-glass {
+        display: block;
+    }
+    .filter {
+        width: 100%;
+    }
+    .filterBox {
+        width: 100%;
+        flex-flow: row wrap;
+        gap: 10px;
+    }
+    .filterBox >a {
+        font-size: 0.8rem;
+    }
+    .btnFilter {
+        width: 40%;
+        padding: 15px;
+    }
 
 /* -------------------------- SECTION HEBERGEMENTS ----------------------------------- */
 
+    .flex {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    .boxContainer {
+        width: 100%;
+        background-color:#FFFFFF;
+        border-radius: 0px;
+    }
+    .boxContainer > h2 {
+        font-size: 1.7rem;
+        margin: 42px 0 23px 25px;
+    }
+    .accommodation {
+        width: 100%;
+    }
+    .popularContain {
+        width: 100%;
+        background-color: #F2F2F2;
+    }
+    .more {
+        display: none;
+    }
 
+    .popular {
+        padding-bottom: 50px;
+    }
+    .cardPopular {
+        width: 80%;
+        height: 150px;
+        margin: 15px auto 15px auto;
+    }
+    .cardAccommodation {
+        width: 400px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .coverImages {
+        width: 100%;
+        height: 154px;
+    }
+    .cardAccommodation > h3, .popularInfos > h3 {
+        font-size: 1.3rem;
+        margin: 4px 0 0 10px;
+    }
+    .cardAccommodation > p, .popularInfos > p {
+        font-size: 1.1rem;
+        margin: 9px 0 0 10px;
+    }
+    .cardAccommodation > h3 {
+        margin-left: 16px;
+    }
+    .cardAccommodation > p {
+        margin-left: 16px;
+    }
+    .flexPopular {
+        padding-top: 25px;
+        font-size: 1.2rem;
+    }
+    .coverImagesPopular {
+        width: 140px;
+        height: 150px;
+    }
+    .popularInfos > .star {
+        margin: 40px 0 12px 10px;
+    }
+    .popularInfos > .except {
+        margin: 65px 0 12px 10px;
+    }
 /* -------------------------- SECTION ACTIVITES ----------------------------------- */
 
-
+    #Activites > h2 {
+        font-size: 1.6rem;
+        padding-top: 30px;
+        width: 35%;
+    }
+    .boxActivity {
+        flex-flow: row wrap;
+        gap: 30px;
+    }
+    .cardActivity {
+        width: 100%;
+    }
+    .imageActivity {
+        width: 100%;
+        height: 140px;
+    }
+    .cardActivity > h3 {
+        margin: 20px;
+        font-size: 1.1rem;
+    }
 /* -------------------------- SECTION FOOTER ----------------------------------- */
+
+    .boxFooter {
+        margin: 50px 0 0 0;
+        flex-direction: column;
+    }
+    .cardFooter {
+        margin: 30px 50px 10px 50px;
+    }
+    .cardFooter > h3 {
+        font-size: 1.3rem;
+    }
+    .cardFooter > a {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+    .boxFooter > :last-child {
+        margin-bottom: 60px;
+    }
+}
+
+/* -------------------------- VERSION DESKTOP LARGE ----------------------------------- */
+@media screen and (min-width: 1185px) {
+    /* ----------------------------- SECTION HÉBERGEMENTS ----------------------------------- */
+
+    .cardAccommodation {
+        width: 226px;
+    }
+
+    .cardPopular {
+        width: 276px;
+    }
+    .coverImagesPopular {
+        width: 95px;
+    }
+    .popularInfos > .star {
+        margin: 45px 0 12px 0;
+    }
+    .popularInfos > .groupe2 {
+        margin: 30px 0 12px 0;
+    }
+    .popularInfos > .except {
+        margin: 48px 0 12px 0;
+    }
 
 }
